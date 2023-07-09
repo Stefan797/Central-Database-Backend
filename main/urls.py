@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from indexcards.views import IndexcardsItemView
 
 from todolist.views import LoginView, TodoItemView
 
@@ -23,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', LoginView.as_view()),
     path('todos/', TodoItemView.as_view()),
+    path('indexcards/', IndexcardsItemView.as_view()),
 ]
